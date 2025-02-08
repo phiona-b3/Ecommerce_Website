@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import useProductStore from "../store/store";
+import { Link } from "react-router-dom";
 
 const ProductsPage = () => {
     const { products, fetchProducts, loading } = useProductStore();
@@ -26,10 +27,12 @@ const ProductsPage = () => {
                 {filteredProducts.length > 0 ? (
                     filteredProducts.map((product) => (
                         <div key={product._id} className="bg-white shadow-lg rounded-lg p-4 hover:shadow-xl transition-all">
-                            <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md"/>
-                            <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
-                            <p className="text-gray-600">{product.description}</p>
-                            <p className="text-xl font-bold mt-2">${product.price}</p>
+                            <Link to={`/products/${product._id}`}>
+                                <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md"/>
+                                <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
+                                <p className="text-gray-600">{product.description}</p>
+                                <p className="text-xl font-bold mt-2">${product.price}</p>
+                            </Link>
                         </div>
                     ))
                 ) : (
