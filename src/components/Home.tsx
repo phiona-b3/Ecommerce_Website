@@ -1,3 +1,4 @@
+import Footer from "./Footer"
 import Herobanner from "./Herobanner"
 import ProductList from "./ProductList"
 import Testimonials from "./Testimonials"
@@ -8,6 +9,7 @@ const Home = () => {
         <Herobanner/>
         <ProductList/>
         <Testimonials/>
+        <Footer/>
     </div>
   )
 }
