@@ -1,14 +1,16 @@
-import { BrowserRouter as Router } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Herobanner from "./components/Herobanner"
-import ProductList from "./components/ProductList"
+import ProductsPage from "./components/ProductsPage"
+import Home from "./components/Home"
 
 const App = () => {
   return (
     <Router>
       <Navbar/>
-      <Herobanner/>
-      <ProductList/>
+      <Routes>
+        <Route path="/" element={<Home/>}></Route>
+        <Route path="/products" element={<ProductsPage/>}></Route>
+      </Routes>
     </Router>
   )
 }
