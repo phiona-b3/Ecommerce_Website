@@ -7,21 +7,25 @@ const ProductList = () => {
         fetchProducts()
     }, [])
   return (
-    <div>
-        <h2>Product List</h2>
+    <div className="mt-10">
+        <h2 className="text-xl font-bold text-center mb-6">Product List</h2>
         {loading ? (
-            <p>Loading...</p>
+            <p className="text-center">Loading...</p>
         ) : (
-            <ul>
-                {products.map((product) => (
-                    <li key={product._id}>
-                        <h3>{product.name}</h3>
-                        <p>{product.description}</p>
-                        <p>${product.price}</p>
-                        <button onClick={() => useProductStore.getState().deleteProduct(product._id)}>Delete</button>
-                    </li>
-                ))}
-            </ul>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                {products.length > 0 ? (
+                    products.map((product) => (
+                        <div key={product._id} className="bg-white shadown-lg rounded-lg p-4 hover:shadow-xl transition-all">
+                            <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md"/>
+                            <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
+                            <p className="text-gray-600">{product.description}</p>
+                            <p className="text-xl font-bold mt-2">${product.price}</p>
+                        </div>
+                    ))
+                ) : (
+                    <p className="text-center text-gray-500">No products available.</p>
+                )}
+            </div>
         )}
     </div>
   )
