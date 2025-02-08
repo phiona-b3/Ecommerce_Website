@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Herobanner = () => {
   return (
     <div className="bg-white shadow-md mt-2 flex flex-col md:flex-row items-center p-6 md:p-10">
