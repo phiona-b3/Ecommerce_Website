@@ -7,6 +7,8 @@ import productRoutes from "./routes/products.js"
 dotenv.config();
 const app = express();
 
+app.use(cors({ origin: "http://localhost:5173" }))
+
 //Middleware
 app.use(express.json());
 app.use(cors());
