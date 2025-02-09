@@ -7,7 +7,7 @@ import productRoutes from "./routes/products.js"
 dotenv.config();
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5173" }))
+app.use(cors({ origin: "https://p-ecommerce-dashboard.netlify.app/" }))
 
 //Middleware
 app.use(express.json());
