@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API_URL = "https://ecommerce-backend-l061.onrender.com/api/products";
 
-interface Product {
+export interface Product {
     _id: string;
     name: string;
     price: number;

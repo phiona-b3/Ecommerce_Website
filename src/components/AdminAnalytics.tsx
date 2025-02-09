@@ -50,8 +50,8 @@ const AdminAnalytics = () => {
         <div className="w-full h-[300px]">
             <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
-                    <Pie data={categoryData} datakey="value" nameKey="name" cx="50%" cy="50%" outerRadius={150} fill="#82ca9d" >
-                    {categoryData.map((entry, index) => (
+                    <Pie data={categoryData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={150} fill="#82ca9d" >
+                    {categoryData.map((_, index) => (
                         <Cell key={`cell-${index}`} fill={["#0088FE", "#00C49F", "#FFBB28", "#FF8042"][index % 4]} />
                     ))}
                     </Pie>

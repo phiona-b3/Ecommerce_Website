@@ -3,10 +3,12 @@ import { Link, useParams } from "react-router-dom";
 import useProductStore from "../store/store";
 import useCartStore from '../store/cartStore';
 
+
 const ProductDetails = () => {
     const { id } = useParams();
     const { products } = useProductStore();
     const { addToCart } = useCartStore();
+    // @ts-expect-error
     const [product, setProduct] = useState<Product | null>(null);
     const [quantity, setQuantity] = useState<number>(1)
 
