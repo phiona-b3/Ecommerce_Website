@@ -14,7 +14,7 @@ const Navbar = () => {
         <ul className="hidden md:flex space-x-6 text-gray-700 font-medium">
             <li><Link to="/" className="hover:text-blue-500">Home</Link></li>
             <li><Link to="/products" className="hover:text-blue-500">Products</Link></li>
-            <li><Link to="/dashboard" className="hover:text-blue-500">Dashboard</Link></li>
+            <li><Link to="/admin-login" className="hover:text-red-500 font-semibold">Admin</Link></li>
         </ul>
         <Link to="/cart" className="relative flex items-center text-gray-700 hover:text-blue-500"><CiShoppingCart />
           {totalItems > 0 && (

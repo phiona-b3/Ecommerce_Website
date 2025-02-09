@@ -4,6 +4,7 @@ import ProductsPage from "./components/ProductsPage"
 import Home from "./components/Home"
 import ProductDetails from "./components/ProductDetails"
 import Cart from "./components/Cart"
+import AdminLogin from "./components/AdminLogin"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/products" element={<ProductsPage/>}></Route>
         <Route path="/products/:id" element={<ProductDetails/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
+        <Route path="/admin-login" element={<AdminLogin/>}></Route>
       </Routes>
     </Router>
   )
