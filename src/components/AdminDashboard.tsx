@@ -13,12 +13,12 @@ const AdminDashboard = () => {
 
   return (
     <div className="p-6">
+      <div className="flex justify-between items-center">
         <h1 className="text-3xl font-bold">Admin Dashboard</h1>
-        <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded mt-4">Logout</button>
-
+        <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded mt-4 justify-end">Logout</button>
+      </div>
         {/*Analytics Section*/}
-        <div className="bg-white p-4 shadow-md rounded-lg">
-          <h2 className="text-xl font-semibold mb-4">Analytics Overview</h2>
+        <div>
           <AdminAnalytics/>
         </div>
 

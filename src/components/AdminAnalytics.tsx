@@ -40,18 +40,18 @@ const AdminAnalytics = () => {
 
 
   return (
-    <div className="p-6 bg-white shadow-md rounded-lg">
-        <h2 className="text-2xl font-bold mb-4">Admin Analytics</h2>
+    <div className="p-6 bg-white shadow-md rounded-lg mt-6">
+        <h2 className="text-2xl font-bold mb-4">Product Analytics</h2>
         {/*Total prodcuts */}
         <p className="text-lg font-semibold">Total Products: {products.length}</p>
         {/*Low Stock Warning */}
         <p className="text-lg font-semibold text-red-500">Low Stock: {products.filter((p) => p.stock < 5).length} products</p>
 
         {/*Products per category chart */}
-        <div className="w-full h-80">
+        <div className="w-full h-[300px]">
             <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
-                    <Pie data={categoryData} datakey="value" nameKey="name" cx="50%" cy="50%" outerRadius={80} fill="#82ca9d" >
+                    <Pie data={categoryData} datakey="value" nameKey="name" cx="50%" cy="50%" outerRadius={150} fill="#82ca9d" >
                     {categoryData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={["#0088FE", "#00C49F", "#FFBB28", "#FF8042"][index % 4]} />
                     ))}
