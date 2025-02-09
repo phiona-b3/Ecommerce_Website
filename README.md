@@ -1,7 +1,7 @@
 
 # E-commerce Website Admin Dashboard
 
-This is a **React + TypeScript** e-commerce web application that allows users to browse products, manage their cart, and perform **admin CRUD operations** for product management. The project implements **state management, RESTful API integration, authentication, and analytics** using modern React best practices.
+This is a **React + TypeScript** e-commerce web application that allows users to browse products, manage their cart, and allow the admin to perform **admin CRUD operations** for product management. The project implements **state management, RESTful API integration, authentication, and analytics** using modern React best practices.
 
 
 ## Features
