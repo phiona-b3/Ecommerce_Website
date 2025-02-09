@@ -24,7 +24,7 @@ const AdminDashboard = () => {
 
         {/*Product Management Page */}
         <div className="mt-6">
-          <Link to="/admin/products" className="bg-blue-500 text-white p-3 rounded block text-center">Manage Products</Link>
+          <Link to="/admin/products" className="bg-blue-400 text-white p-3 rounded block text-center">Manage Products</Link>
         </div>
     </div>
   )

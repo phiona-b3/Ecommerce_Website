@@ -1,8 +1,7 @@
-
-//IMPORTANT: Create a product with Stock less than 5
-//include different products in different categories
 import { useEffect, useState } from 'react'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from "recharts";
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 interface Product {
     _id: string;
@@ -16,7 +15,7 @@ const AdminAnalytics = () => {
     const [categoryData, setCategoryData] = useState<{ name: string; value: number }[]>([])
 
     useEffect(() => {
-        fetch("https://ecommerce-backend-l061.onrender.com/api/products")
+        fetch(API_URL)
         .then((res) => res.json())
         .then((data) => {
             setProducts(data);

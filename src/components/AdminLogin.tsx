@@ -7,13 +7,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-//Remainder: Create a dummy email and password to be used to access the admin dashboard
-//Include it in the ReadMe
-
 const loginSchema = z.object({
     email: z.string().email("Invalid email"),
     password: z.string().min(6, "Password must be at least 6 characters"),
 });
+
 
 type LoginFormData = z.infer<typeof loginSchema>;
 
