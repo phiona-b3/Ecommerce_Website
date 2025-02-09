@@ -7,6 +7,7 @@ import Cart from "./components/Cart"
 import AdminLogin from "./components/AdminLogin"
 import AdminRoute from "./components/AdminRoute"
 import AdminDashboard from "./components/AdminDashboard"
+import AdminProducts from "./components/AdminProducts"
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/products/:id" element={<ProductDetails/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
         <Route path="/admin-login" element={<AdminLogin/>}></Route>
+        <Route path="/admin/products" element={<AdminProducts/>}></Route>
         <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard/></AdminRoute>}/>
       </Routes>
     </Router>
