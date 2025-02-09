@@ -1,50 +1,59 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# E-commerce Website Admin Dashboard
 
-Currently, two official plugins are available:
+This is a **React + TypeScript** e-commerce web application that allows users to browse products, manage their cart, and perform **admin CRUD operations** for product management. The project implements **state management, RESTful API integration, authentication, and analytics** using modern React best practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Landing Page**
+- **Product Management**
+- **Cart Integration**
+- **Admin Authentication**
+- **Admin Dashboard**
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Tech Stack
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- **Frontend:** React (TypeScript), TailwindCSS  
+- **State Management:** Zustand  
+- **Backend:** Node.js, Express.js, MongoDB (Deployed on Render)  
+- **Image Uploads:** Cloudinary  
+- **Deployment:** Netlify (Frontend), Render (Backend)  
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Installation
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/phiona-b3/Ecommerce_Website
+cd Ecommerce_Website
+
+## Run to install dependencies
+npm install
+
+## Environment Variables
+Create a .env file in the root directory and add:
+
+VITE_FIREBASE_API_KEY=AIzaSyAZVJQ_1aaZBap2K2vAHM4lkYU_hM33hBc
+VITE_FIREBASE_AUTH_DOMAIN=ecommerce-website-dashboard.firebaseapp.com
+VITE_FIREBASE_PROJECT_1D=ecommerce-website-dashboard
+VITE_FIREBASE_STORAGE_BUCKET=ecommerce-website-dashboard.firebasestorage.app
+VITE_FIREBASE_MESSAGING_SENDER_ID=1015081360188
+VITE_FIREBASE_APP_ID=1:1015081360188:web:4ff5b51fd40db8d7711c39
+VITE_FIREBASE_MEASUREMENT_ID=G-01BF3FEXZF
+VITE_API_URL=https://ecommerce-backend-l061.onrender.com/api/products
+VITE_CLOUDINARY_URL=https://api.cloudinary.com/v1_1/djfyejzhz/image/upload
+VITE_CLOUDINARY_UPLOAD_PRESET=products_images
+
+##Run the Development Server
+npm run dev
+
+
+## Contact
+- Email: phionadev@gmail.com
+- GitHub: https://github.com/phiona-b3
+
+## Important Links
+- GitHub Repository: https://github.com/phiona-b3/Ecommerce_Website
+- Live Frontend: https://p-ecommerce-dashboard.netlify.app/
+- Live Backend: https://ecommerce-backend-l061.onrender.com/api/products
