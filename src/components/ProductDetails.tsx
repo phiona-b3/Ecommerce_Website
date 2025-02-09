@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useProductStore from "../store/store";
+import useCartStore from '../store/cartStore';
 
 const ProductDetails = () => {
     const { id } = useParams();
     const { products } = useProductStore();
+    const { addToCart } = useCartStore();
     const [product, setProduct] = useState<Product | null>(null);
+    const [quantity, setQuantity] = useState<number>(1)
 
     useEffect(() => {
         const foundProduct = products.find((p) => p._id.toString() === id);
@@ -20,7 +23,13 @@ const ProductDetails = () => {
         <h1 className="text-3xl font-bold mt-4">{product.name}</h1>
         <p className="text-gray-600 mt-2">{product.description}</p>
         <p className="text-xl font-bold mt-2">${product.price}</p>
-        <button className="mt-4 bg-cyan-500 text-white px-6 py-2 rounded-lg">Add to Cart</button>
+
+        <div className="mt-4">
+          <label className="font-bold">Quantity: </label>
+          <input type="number" value={quantity} min="1" className="border px-3 py-1 ml-2 w-16 text-center" onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))} />
+        </div>
+
+        <button onClick={() => addToCart(product, quantity)} className="mt-4 bg-cyan-500 text-white px-6 py-2 rounded-lg"><Link to="/cart">Add to Cart</Link></button>
     </div>
   )
 }
