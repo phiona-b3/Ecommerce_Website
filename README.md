@@ -15,7 +15,7 @@ This is a **React + TypeScript** e-commerce web application that allows users to
 - **ProductsPage**
   <img width="1261" alt="image" src="https://github.com/user-attachments/assets/5ee999c9-568b-49a3-ba29-b58043f6e6e4" />
   
--**ProductsDetailPage**
+- **ProductsDetailPage**
   <img width="1267" alt="image" src="https://github.com/user-attachments/assets/1a5a70f3-0961-4dee-870f-79ab1bc049cb" />
   
 - **Cart Integration**
