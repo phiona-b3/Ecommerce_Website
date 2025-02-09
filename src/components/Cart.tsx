@@ -12,8 +12,8 @@ const Cart = () => {
       ) : (
         <div>
           {cart.map((item) => (
-            <div key={item._id} className="flex items-center justify-between border-b py-2">
-              <img src={item.image} alt={item.name} className="w-16 h-16 object-cover" />
+            <div key={item._id} className="flex items-center justify-between border-b py-2 bg-white">
+              <img src={item.image} alt={item.name} className="w-16 h-16 object-cover ml-3" />
               <div className="flex-1 ml-4">
                 <p className="font-bold">{item.name}</p>
                 <p className="text-gray-600">${item.price}</p>
@@ -22,7 +22,7 @@ const Cart = () => {
                   <input type="number" value={item.quantity} min="1" className="border px-2 py-1 ml-2 w-16" onChange={(e) => updateQuantity(item._id, Number(e.target.value))} />
                 </div>
               </div>
-              <button onClick={() => removeFromCart(item._id)} className="text-red-500 ml-4">Remove</button>
+              <button onClick={() => removeFromCart(item._id)} className="text-red-500 mr-4">Remove</button>
             </div>
           ))}
 
