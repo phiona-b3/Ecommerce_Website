@@ -7,6 +7,8 @@ const productSchema = new Schema({
     price: Number,
     description: String,
     image: String,
+    category: String,
+    stock: Number
 });
 
 export default mongoose.model("Product", productSchema);

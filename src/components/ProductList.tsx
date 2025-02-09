@@ -25,8 +25,10 @@ const ProductList = () => {
                                     <Link to={`/products/${product._id}`}>
                                         <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md"/>
                                         <h3 className="text-lg font-semibold mt-2">{product.name}</h3>
+                                        <p className="text-blue-600">{product.category}</p>
                                         <p className="text-gray-600">{product.description}</p>
                                         <p className="text-xl font-bold mt-2">${product.price}</p>
+                                        <p className="mt-2">In-stock: {product.stock}</p>
                                     </Link>
                                 </div>
                             ))

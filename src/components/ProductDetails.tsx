@@ -21,6 +21,7 @@ const ProductDetails = () => {
     <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
         <img src={product.image} alt={product.name} className="w-full h-96 object-cover rounded-md"/>
         <h1 className="text-3xl font-bold mt-4">{product.name}</h1>
+        <p className="text-blue-600 mt-2">{product.category}</p>
         <p className="text-gray-600 mt-2">{product.description}</p>
         <p className="text-xl font-bold mt-2">${product.price}</p>
 
