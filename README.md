@@ -66,7 +66,12 @@ VITE_CLOUDINARY_UPLOAD_PRESET=products_images
 
 ##Run the Development Server
 npm run dev
+
+## Logging to Admin dashboard use
+email: example@gmail.com
+password: 123456
 ```
+
 ## Contact
 - Email: phionadev@gmail.com
 - GitHub: https://github.com/phiona-b3
