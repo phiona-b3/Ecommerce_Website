@@ -66,11 +66,15 @@ VITE_FIREBASE_MEASUREMENT_ID=<YOUR_FIREBASE_MEASUREMENT_ID>
 VITE_API_URL=<YOUR_BACKEND_URL>
 VITE_CLOUDINARY_URL=<YOUR_CLOUDINARY_URL>
 VITE_CLOUDINARY_UPLOAD_PRESET=<YOUR_UPLOAD_PRESET>
+```
 
-##Run the Development Server
+## Run the Development Server
+```sh
 npm run dev
+```
 
 ## Logging to Admin dashboard use
+```
 email: example@gmail.com
 password: 123456
 ```
